@@ -3,7 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TOPUNG WALI BAROKAH | Terapi Totok Punggung & Bekam Syar'i</title>
+    <!-- BASIC SEO -->
+    <title>
+      TOPUNG WALI BAROKAH | Terapi Totok Punggung & Bekam Syar'i Makassar
+    </title>
+
+    <meta
+      name="description"
+      content="TOPUNG WALI BAROKAH Makassar menyediakan terapi totok punggung & bekam syar'i profesional. Praktisi sejak 2018. Lokasi Tamalanrea. Reservasi via WhatsApp."
+    />
+
+    <meta
+      name="keywords"
+      content="totok punggung makassar, bekam syari makassar, terapi islami makassar, pijat sunnah, terapi kesehatan tamalanrea"
+    />
+
+    <meta name="geo.region" content="ID-SN" />
+    <meta name="geo.placename" content="Makassar" />
+    <meta name="geo.position" content="-5.1287;119.4861" />
+    <meta name="ICBM" content="-5.1287,119.4861" />
+
+    <!-- OPEN GRAPH -->
+    <meta
+      property="og:title"
+      content="TOPUNG WALI BAROKAH | Terapi Totok & Bekam Makassar"
+    />
+    <meta
+      property="og:description"
+      content="Terapi totok punggung & bekam syar'i terpercaya di Makassar. Praktisi sejak 2018. Booking sekarang."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/assets/image/og-cover.jpg" />
+    <meta property="og:url" content="https://topungwalibarokah.id" />
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TOPUNG WALI BAROKAH Makassar" />
+    <meta
+      name="twitter:description"
+      content="Totok punggung & bekam syar'i terpercaya di Tamalanrea."
+    />
+    <meta name="twitter:image" content="/assets/image/og-cover.jpg" />
+
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://topungwalibarokah.id" />
 
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -21,6 +64,64 @@
           },
         },
       };
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "TOPUNG WALI BAROKAH",
+        "image": "https://topungwalibarokah.id/assets/image/og-cover.jpg",
+        "@id": "https://topungwalibarokah.id",
+        "url": "https://topungwalibarokah.id",
+        "telephone": "+6282280695085",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jl. Bontoramba Makassar, Tamalanrea",
+          "addressLocality": "Makassar",
+          "addressRegion": "Sulawesi Selatan",
+          "postalCode": "90245",
+          "addressCountry": "ID"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -5.1287,
+          "longitude": 119.4861
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "08:00",
+            "closes": "21:00"
+          }
+        ],
+        "sameAs": ["https://www.instagram.com/topungwalibarokah"],
+        "priceRange": "Rp",
+        "areaServed": "Makassar",
+        "medicalSpecialty": "PhysicalTherapy"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Terapi Totok Punggung dan Bekam Syar'i",
+        "provider": {
+          "@type": "MedicalBusiness",
+          "name": "TOPUNG WALI BAROKAH"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Makassar"
+        }
+      }
     </script>
   </head>
 
@@ -88,7 +189,7 @@
           <a
             href="https://wa.me/628114455660?text=Assalamu’alaikum%20TOPUNG%20WALI%20BAROKAH%0ASaya%20ingin%20konsultasi%20terapi%20Totok%20Punggung%20/%20Bekam."
             target="_blank"
-            class="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-full font-semibold transition"
+            class="inline-flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 px-6 py-3 rounded-full font-semibold transition"
           >
             <img
               src="/assets/icon/wa_white.png"
@@ -110,7 +211,7 @@
       <!-- Floating WhatsApp -->
       <a
         href="https://wa.me/628114455660?text=Assalamu’alaikum%20TOPUNG%20WALI%20BAROKAH%0ASaya%20ingin%20konsultasi%20terapi%20Totok%20Punggung%20/%20Bekam."
-        class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 p-4 rounded-full shadow-lg z-50"
+        class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 p-4 rounded-full shadow-lg z-50 flex items-center justify-center"
       >
         <img src="/assets/icon/wa_white.png" alt="" />
       </a>
@@ -163,7 +264,7 @@
       </div>
     </section>
 
-    <section id="therapist" class="py-24 bg-soft">
+    <section id="therapist" class="py-24">
       <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-16">
           <h2 class="text-3xl font-bold">
@@ -178,14 +279,16 @@
           class="grid md:grid-cols-2 gap-12 items-center bg-white rounded-3xl shadow-xl p-10"
         >
           <!-- FOTO -->
-          <div class="relative">
+          <div class="flex flex-col items-center">
             <img
-              src="image/terapis.jpg"
+              src="../wisata_topung_indo/assets/image/terapis.png"
               alt="Terapis"
-              class="rounded-3xl shadow-lg object-cover w-full h-[420px]"
+              class="rounded-3xl shadow-lg object-cover w-450 h-[420px]"
             />
+
+            <!-- Badge bawah foto -->
             <span
-              class="absolute bottom-4 left-4 bg-primary text-white text-xs px-4 py-2 rounded-full"
+              class="mt-4 bg-primary text-white text-xs px-4 py-2 rounded-full"
             >
               Praktisi Sejak 2018
             </span>
@@ -253,8 +356,15 @@
         <div class="grid md:grid-cols-3 gap-8">
           <!-- Card -->
           <div
-            class="bg-white dark:bg-gray-900 rounded-xl shadow hover:shadow-xl p-6 transition border border-transparent shadow-md hover:shadow-xl hover:shadow-xl hover:-translate-y-1 hover:border-gray-300 active:scale-[0.98] dark:hover:border-white dark:hover:shadow-[0_0_15px_rgba(255,255,255,0.35)]"
+            class="bg-white dark:bg-gray-900 rounded-xl shadow hover:shadow-xl p-4 transition border border-transparent shadow-md hover:shadow-xl hover:shadow-xl hover:-translate-y-1 hover:border-gray-300 active:scale-[0.98] dark:hover:border-white dark:hover:shadow-[0_0_15px_rgba(255,255,255,0.35)]"
           >
+            <!-- IMAGE -->
+            <img
+              src="../wisata_topung_indo/assets/image/topung_indo.png"
+              alt="Totok Punggung"
+              class="w-full h-80 object-cover rounded-lg mb-4"
+            />
+
             <h3 class="font-bold mb-2">Totok Punggung</h3>
             <p class="text-gray-600 dark:text-gray-400 mb-4">
               Terapi kesehatan & kebugaran
@@ -268,6 +378,11 @@
           <div
             class="bg-white dark:bg-gray-900 rounded-xl shadow hover:shadow-xl p-6 transition border border-transparent shadow-md hover:shadow-xl hover:-translate-y-1 hover:border-gray-300 active:scale-[0.98] dark:hover:border-white dark:hover:shadow-[0_0_15px_rgba(255,255,255,0.35)]"
           >
+            <img
+              src="../wisata_topung_indo/assets/image/bekam_.jpg"
+              alt="Totok Punggung"
+              class="w-full h-80 object-cover rounded-lg mb-4"
+            />
             <h3 class="font-bold mb-2">Bekam</h3>
             <p class="text-gray-600 dark:text-gray-400 mb-4">
               Terapi sunnah & syar'i
@@ -281,6 +396,11 @@
           <div
             class="bg-white dark:bg-gray-900 rounded-xl shadow hover:shadow-xl p-6 transition border border-transparent shadow-md hover:shadow-xl hover:shadow-xl hover:-translate-y-1 hover:border-gray-300 active:scale-[0.98] dark:hover:border-white dark:hover:shadow-[0_0_15px_rgba(255,255,255,0.35)]"
           >
+            <img
+              src="../wisata_topung_indo/assets/image/ide.jpg"
+              alt="Totok Punggung"
+              class="w-full h-80 object-cover rounded-lg mb-4"
+            />
             <h3 class="font-bold mb-2">Kenapa Memilih Kami?</h3>
             <ul class="text-sm space-y-1">
               <li>✅ Dengan izin Allah, manfaat cepat dirasakan</li>
