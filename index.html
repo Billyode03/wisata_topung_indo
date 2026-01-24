@@ -453,4 +453,17 @@
 
     autoSlide();
   </script>
+  <!-- ================= SCRIPT ================= -->
+  <script>
+    // mobile nav
+    const btn = document.getElementById("menuBtn");
+    const menu = document.getElementById("mobileMenu");
+
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+
+    // year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </html>
