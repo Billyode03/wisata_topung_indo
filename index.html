@@ -51,8 +51,6 @@
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    
-
     <script>
       tailwind.config = {
         darkMode: "class",
@@ -194,7 +192,7 @@
             class="inline-flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 px-6 py-3 rounded-full font-semibold transition"
           >
             <img
-              src=assets/icon/wa_white.png"
+              src="./assets/icon/wa_white.png"
               alt="WhatsApp"
               class="w-5 h-5"
             />
@@ -320,7 +318,7 @@
                 class="inline-flex items-center justify-center gap-3 px-6 py-3 rounded-full bg-green-600 hover:bg-green-700 text-white font-semibold shadow-lg transition transform hover:-translate-y-0.5"
               >
                 <img
-                  src="./aassets/icon/wa_white.png"
+                  src="./assets/icon/wa_white.png"
                   class="w-5 h-5"
                   alt="WhatsApp"
                 />
@@ -556,63 +554,62 @@
         </div>
       </div>
     </footer>
+    <!-- ================= SCRIPT ================= -->
+    <script>
+      const track = document.getElementById("testimonialTrack");
+      const dots = document.querySelectorAll(".dot");
+
+      let index = 0;
+      const total = dots.length;
+      let interval;
+
+      function updateSlider(i) {
+        track.style.transform = `translateX(-${i * 100}%)`;
+
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle("opacity-100", idx === i);
+          dot.classList.toggle("opacity-40", idx !== i);
+        });
+
+        index = i;
+      }
+
+      function autoSlide() {
+        interval = setInterval(() => {
+          index = (index + 1) % total;
+          updateSlider(index);
+        }, 4500);
+      }
+
+      // Dot click
+      dots.forEach((dot, i) => {
+        dot.addEventListener("click", () => {
+          clearInterval(interval);
+          updateSlider(i);
+          autoSlide();
+        });
+      });
+
+      // Pause on hover
+      track.parentElement.addEventListener("mouseenter", () =>
+        clearInterval(interval),
+      );
+      track.parentElement.addEventListener("mouseleave", autoSlide);
+
+      autoSlide();
+    </script>
+    <!-- ================= SCRIPT ================= -->
+    <script>
+      // mobile nav
+      const btn = document.getElementById("menuBtn");
+      const menu = document.getElementById("mobileMenu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+
+      // year
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
-
-  <!-- ================= SCRIPT ================= -->
-  <script>
-    const track = document.getElementById("testimonialTrack");
-    const dots = document.querySelectorAll(".dot");
-
-    let index = 0;
-    const total = dots.length;
-    let interval;
-
-    function updateSlider(i) {
-      track.style.transform = `translateX(-${i * 100}%)`;
-
-      dots.forEach((dot, idx) => {
-        dot.classList.toggle("opacity-100", idx === i);
-        dot.classList.toggle("opacity-40", idx !== i);
-      });
-
-      index = i;
-    }
-
-    function autoSlide() {
-      interval = setInterval(() => {
-        index = (index + 1) % total;
-        updateSlider(index);
-      }, 4500);
-    }
-
-    // Dot click
-    dots.forEach((dot, i) => {
-      dot.addEventListener("click", () => {
-        clearInterval(interval);
-        updateSlider(i);
-        autoSlide();
-      });
-    });
-
-    // Pause on hover
-    track.parentElement.addEventListener("mouseenter", () =>
-      clearInterval(interval),
-    );
-    track.parentElement.addEventListener("mouseleave", autoSlide);
-
-    autoSlide();
-  </script>
-  <!-- ================= SCRIPT ================= -->
-  <script>
-    // mobile nav
-    const btn = document.getElementById("menuBtn");
-    const menu = document.getElementById("mobileMenu");
-
-    btn.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
-    });
-
-    // year
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </html>
